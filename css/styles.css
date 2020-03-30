@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: aqua;
+}
+
+/* NAVIGATION */
+
+nav {
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    height: 60px;
+}
+
+a {
+    color: white;
+
+}
+
+/* ---------- */
+
+
+/* MAIN       */
+
+section {
+    background-color: chartreuse;
+    margin: 0;
+    padding: 16px;
+}
+
+.card {
+    background-color: bisque;
+    margin-bottom: 16px;
+}
+
+
+@media screen and (min-width:640px) {
+
+    section {
+        max-width: 960px;
+        margin: 0 auto;
+
+    }
+
+    #topstories {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-gap: 16px;
+    }
+
+    #card1 {
+        grid-column: 1/9;
+    }
+
+    #card2 {
+        grid-column: 9/13;
+    }
+
+    #card3 {
+        grid-column: 1/7;
+    }
+
+    #card4 {
+        grid-column: 7/13;
+    }
+}
+
+@media screen and (min-width:1440px) {
+
+    section {
+        background-color: coral;
+    }
+
+}
