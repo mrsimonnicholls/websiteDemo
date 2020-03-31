@@ -7,19 +7,86 @@ body {
     background-color: aqua;
 }
 
+html {
+    font-size: 100%;
+    font-family: 'Work Sans', sans-serif;
+}
+
+img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* TYPOGRAPHY */
+
+h1 {}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+p {
+    color: #222;
+    font-size: 0.875rem;
+    font-weight: 300;
+}
+
+p a {
+    color: inherit;
+    font-weight: 500;
+}
+
+
+
+
+
+
 /* NAVIGATION */
 
-nav {
+header {
     background-color: #333;
+    height: 60px;
+}
+
+nav {
+
     display: flex;
     justify-content: center;
+    align-items: center;
     height: 60px;
+    margin-bottom: 10px;
 }
 
 a {
     color: white;
 
 }
+
+#logo {
+    width: 125px;
+    height: 27px;
+}
+
+#links {
+    display: none;
+}
+
+li {
+    font-weight: 300;
+    font-size: 0.8rem;
+    list-style-type: none;
+    margin-right: 50px;
+    color: #fff;
+}
+
+li:last-child {
+    margin-right: 0;
+}
+
+
 
 /* ---------- */
 
@@ -29,21 +96,67 @@ a {
 section {
     background-color: chartreuse;
     margin: 0;
-    padding: 16px;
+    padding: 0;
 }
+
+#hero {
+    height: 320px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    background-color: blue;
+}
+
+#hero img {}
 
 .card {
     background-color: bisque;
     margin-bottom: 16px;
 }
 
+.cardText {
+    padding: 16px;
+}
+
+
+
+
+#card2 {
+    height: 320px;
+}
 
 @media screen and (min-width:640px) {
+
+    html {
+        font-size: 125%;
+    }
+
+
+    /* NAVIGATION */
+
+    nav {
+        max-width: 960px;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+
+    #links {
+        display: flex;
+    }
+
+
+    /* ---------- */
 
     section {
         max-width: 960px;
         margin: 0 auto;
 
+    }
+
+    #hero {
+        max-width: 960px;
+        margin: 0 auto;
+        height: 570px;
+        margin-bottom: 16px;
     }
 
     #topstories {
@@ -53,7 +166,13 @@ section {
     }
 
     #card1 {
+        height: 375px;
+
         grid-column: 1/9;
+
+        display: grid;
+        grid-template-columns: 5fr 3fr;
+
     }
 
     #card2 {
